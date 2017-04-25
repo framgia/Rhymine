@@ -1,9 +1,11 @@
 en:
+  name: Rhymine
   page:
-    welcome:
+    home:
       slogan: "Your music, all the time"
       email: "Enter your email"
       signup: "Signup"
       name: "Enter your name"
       password: "Enter your password"
       basic_info: "Your basic info"
+      signin: "Sign In"
