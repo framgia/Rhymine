@@ -43,16 +43,16 @@ h1 {
 }
 
 input
-  &[type="text"],
-  &[type="password"],
-  &[type="date"],
-  &[type="datetime"],
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="tel"],
-  &[type="time"],
-  &[type="url"],
+  [type="date"],
+  [type="text"],
+  [type="password"],
+  [type="datetime"],
+  [type="email"],
+  [type="number"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="url"],
 textarea,
 select {
   background: $input-background;
@@ -70,8 +70,8 @@ select {
 }
 
 input
-  &[type="radio"],
-  &[type="checkbox"] {
+  [type="radio"],
+  [type="checkbox"] {
   margin: 0 4px 8px 0;
 }
 
