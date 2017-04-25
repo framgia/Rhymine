@@ -9,3 +9,9 @@ en:
       password: "Enter your password"
       basic_info: "Your basic info"
       signin: "Sign In"
+      signout: "Sign Out"
+  session:
+    signin: "Sign In"
+    new_user: "New User?"
+    remember_me: "Remember me on this computer"
+    sign_up_now: "Sign up now!"
