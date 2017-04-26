@@ -1,9 +1,16 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to t("name"), "#", id: "logo" %>
+    <%= link_to t("name"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("page.home.signin"), "#" %></li>
+        <% if current_user %>
+          <li>
+            <%= link_to t("page.home.signout"), destroy_user_session_path,
+              method: :delete %>
+          </li>
+        <% else %>
+          <li><%= link_to t("page.home.signin"), new_user_session_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>

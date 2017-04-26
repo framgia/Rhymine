@@ -153,3 +153,18 @@ form {
   height: inherit;
   padding: 20px;
 }
+
+.signin {
+  margin-top: 80px;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+  input[type="checkbox"] {
+    margin-left: 0px !important;
+  }
+}
