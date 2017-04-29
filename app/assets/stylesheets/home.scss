@@ -4,6 +4,7 @@
 body {
   padding: 0 !important;
 }
+
 $gray-medium-light: #eaeaea;
 
 body {
@@ -27,8 +28,8 @@ textarea {
   }
 }
 
-
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 100px;
   line-height: 1;
 }
 
@@ -40,7 +41,6 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
