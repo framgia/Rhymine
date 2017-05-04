@@ -15,3 +15,12 @@ en:
     new_user: "New User?"
     remember_me: "Remember me on this computer"
     sign_up_now: "Sign up now!"
+  registration:
+    password: "%{length} characters minimum"
+    edit:
+      user: "Edit User"
+      leave_blank: "(leave blank if you don't want to change it)"
+      current_password: "(we need your current password to confirm your changes)"
+      update: "Update"
+    new:
+      signup: "Sign Up"
