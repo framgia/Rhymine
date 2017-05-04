@@ -19,6 +19,7 @@ gem "bcrypt"
 gem "faker"
 gem "config"
 gem "devise"
+gem "cancancan"
 
 group :development, :test do
   gem "byebug", platform: :mri

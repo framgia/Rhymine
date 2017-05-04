@@ -4,6 +4,9 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
+          <% if current_user.is_admin? %>
+            <li><%= link_to t("genres.name"), admins_genres_path %></li>
+          <% end %>
           <li>
             <%= link_to t("page.home.signout"), destroy_user_session_path,
               method: :delete %>
