@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="col-md-12">
+    <h2><%= t "category" %></h2>
+    <div class="col-md-5">
+      <div id="form-create">
+        <%= form_for [:admins, @genre], remote: true do |f| %>
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class: "form-control"  %>
+          <%= f.submit t("genres.create"), class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-md-7 genres" id="genres">
+      <ol>
+        <%= render @genres %>
+      </ol>
+    </div>
+  </div>
+</div>

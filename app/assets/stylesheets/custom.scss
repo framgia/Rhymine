@@ -17,7 +17,6 @@ $text-shadow: rgba(255, 255, 255, .2);
 $welcome-black-trans: rgba(0, 0, 0, .7);
 $welcome-black-notrans: #000;
 
-
 *,
 *::before,
 *::after {
@@ -166,5 +165,13 @@ form {
   }
   input[type="checkbox"] {
     margin-left: 0px !important;
+  }
+}
+
+.genres {
+  li {
+    overflow: auto;
+    padding: 12px 0;
+    border-bottom: 1px solid $gray-lighter;
   }
 }

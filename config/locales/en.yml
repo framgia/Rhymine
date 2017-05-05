@@ -24,3 +24,9 @@ en:
       update: "Update"
     new:
       signup: "Sign Up"
+  genres:
+    name: "Genres"
+    create: "Create genre"
+  flash:
+    danger:
+      user_not_admin: "You are not administrator"
