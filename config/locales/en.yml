@@ -1,5 +1,7 @@
 en:
   name: Rhymine
+  error: "error"
+  error_form: "The form contains"
   page:
     home:
       slogan: "Your music, all the time"
@@ -10,6 +12,9 @@ en:
       basic_info: "Your basic info"
       signin: "Sign In"
       signout: "Sign Out"
+      upload: "Upload"
+      profile: "Profile"
+      account: "Account"
   session:
     signin: "Sign In"
     new_user: "New User?"
@@ -27,6 +32,17 @@ en:
   genres:
     name: "Genres"
     create: "Create genre"
+  song:
+    new:
+      upload: "Upload your new song"
+      button: "Upload"
+      select: "- Select Genres -"
+  user:
+    show:
+      all_songs: "All Songs"
   flash:
     danger:
       user_not_admin: "You are not administrator"
+      user_not_existed: "Users didn't existed"
+    info:
+      upload_song_success: "Upload song sucessfull!"
