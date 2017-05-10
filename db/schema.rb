@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425091813) do
+ActiveRecord::Schema.define(version: 20170509074933) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 20170425091813) do
     t.integer  "genre_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "audio"
     t.index ["genre_id"], name: "index_songs_on_genre_id"
     t.index ["user_id"], name: "index_songs_on_user_id"
   end

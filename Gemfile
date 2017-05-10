@@ -20,6 +20,7 @@ gem "faker"
 gem "config"
 gem "devise"
 gem "cancancan"
+gem "carrierwave"
 
 group :development, :test do
   gem "byebug", platform: :mri
