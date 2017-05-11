@@ -214,3 +214,35 @@ aside {
 .title {
   font-size: 200%;
 }
+
+.container {
+  padding: 2px 16px;
+}
+
+.audio-player {
+  width: 98%;
+  padding-top: 130px;
+}
+
+.panel-body {
+  padding-top: 10px;
+  background-image: url(https://timemanagement.nl/wp-content/uploads/muziek-concentratie-werken-642x250.jpg);
+}
+
+.panel.panel-default {
+  margin-top: 30px;
+}
+
+audio {
+  width: 100%;
+  -webkit-transition:all 0.5s linear;
+  -moz-transition:all 0.5s linear;
+  -o-transition:all 0.5s linear;
+  transition:all 0.5s linear;
+  -moz-box-shadow: 2px 2px 4px 0px #006773;
+  -webkit-box-shadow:  2px 2px 4px 0px #006773;
+  box-shadow: 2px 2px 4px 0px #006773;
+  -moz-border-radius:7px 7px 7px 7px ;
+  -webkit-border-radius:7px 7px 7px 7px ;
+  border-radius:7px 7px 7px 7px ;
+}
