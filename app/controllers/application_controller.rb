@@ -11,6 +11,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  rescue_from ActiveRecord::RecordNotFound do
+    flash[:danger] = t "flash.danger.not_found"
+    redirect_to root_path
+  end
+
   private
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit :sign_up, keys: [:name, :email,

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
   resources :songs, only: [:new, :create, :show]
+  resources :comments, only: [:create]
 
   namespace :admins do
     resources :genres, only: [:index, :create]

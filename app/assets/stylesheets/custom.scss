@@ -85,6 +85,11 @@ p {
   }
 }
 
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -126,9 +131,17 @@ input {
 .genres {
   li {
     overflow: auto;
-    padding: 12px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+.comment {
+  padding: 12px 0;
+  border-bottom: 1px solid $gray-lighter;
+}
+
+.show-comment {
+  margin-bottom: 100px;
 }
 
 #session_remember_me {
@@ -204,4 +217,14 @@ audio {
   -moz-border-radius:7px 7px 7px 7px ;
   -webkit-border-radius:7px 7px 7px 7px ;
   border-radius:7px 7px 7px 7px ;
+}
+
+.comment-form {
+  margin-top: 15px;
+}
+
+.timestamp {
+  color: $gray-light;
+  display: block;
+  font-size: 12px;
 }
