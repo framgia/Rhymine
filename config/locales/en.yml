@@ -2,6 +2,8 @@ en:
   name: Rhymine
   error: "error"
   error_form: "The form contains"
+  delete: "Delete"
+  confirm: "You sure?"
   page:
     home:
       slogan: "Your music, all the time"
@@ -47,10 +49,15 @@ en:
     button: "Comment"
     name: "COMMENTS (%{count})"
     posted_ago: "Posted %{time} ago"
+    update: "Update"
   flash:
     danger:
       user_not_admin: "You are not administrator"
       user_not_existed: "Users didn't existed"
       not_found: "Object cannot found"
+      cannot_delete: "Cannot delete"
+      cannot_update: "Update failed"
     info:
       upload_song_success: "Upload song sucessfull!"
+    success:
+      delete_success: "Delete sucessfull!"
