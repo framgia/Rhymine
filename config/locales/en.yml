@@ -18,7 +18,7 @@ en:
   session:
     signin: "Sign In"
     new_user: "New User?"
-    remember_me: "Remember me on this computer"
+    remember_me: "Remember me"
     sign_up_now: "Sign up now!"
   registration:
     password: "%{length} characters minimum"
