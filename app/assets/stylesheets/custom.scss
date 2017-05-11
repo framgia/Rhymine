@@ -1,160 +1,115 @@
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-$gray: #384047;
-$background: #f4f7f8;
-$input-background: rgba(255, 255, 255, .1);
-$input-background-color:  #e8eeef;
-$input-color: #8a97a0;
-$box-shadow-color: rgba(0, 0, 0, .03);
-$button-background:  #4bc970;
-$button-border-color: #3ac162;
-$button-color: #fff;
-$button-box-shadow: rgba(255, 255, 255, .1);
-$number-background-color: #5fcf80;
-$number-color: #fff;
-$text-shadow: rgba(255, 255, 255, .2);
-$welcome-black-trans: rgba(0, 0, 0, .7);
-$welcome-black-notrans: #000;
+/* mixins, variables, etc. */
 
-*,
-*::before,
-*::after {
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* universal */
+
 body {
-  color: $gray;
-  font-family: 'Nunito', sans-serif;
+  padding-top: 60px;
 }
 
-form {
-  background: $background;
-  border-radius: 8px;
-  margin: 10px auto;
-  max-width: 300px;
-  padding: 10px 20px;
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
 }
 
 h1 {
-  margin: 0 0 30px;
-  text-align: center;
-}
-
-input
-  [type="date"],
-  [type="text"],
-  [type="password"],
-  [type="datetime"],
-  [type="email"],
-  [type="number"],
-  [type="search"],
-  [type="tel"],
-  [type="time"],
-  [type="url"],
-textarea,
-select {
-  background: $input-background;
-  background-color: $input-background-color;
-  border: 0;
-  box-shadow: 0 1px 0 $box-shadow-color inset;
-  color: $input-color;
-  font-size: 16px;
-  height: auto;
-  margin: 0;
+  font-size: 3em;
+  letter-spacing: -2px;
   margin-bottom: 30px;
-  outline: 0;
-  padding: 15px;
-  width: 100%;
-}
-
-input
-  [type="radio"],
-  [type="checkbox"] {
-  margin: 0 4px 8px 0;
-}
-
-select {
-  border-radius: 2px;
-  height: 32px;
-  padding: 6px;
-}
-
-button {
-  background-color: $button-background;
-  border: $button-border-color 1px solid;
-  border-radius: 5px;
-  border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 $button-box-shadow inset;
-  color: $button-color;
-  font-size: 18px;
-  font-style: normal;
-  margin-bottom: 10px;
-  padding: 19px 39px 18px;
   text-align: center;
-  width: 100%;
 }
 
-fieldset {
-  border: 0;
+h2 {
+  font-size: 2.5em;
+  letter-spacing: -1px;
   margin-bottom: 30px;
-}
-
-legend {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-label
-  .light {
-  display: inline;
-  font-weight: 300;
-  }
-
-.number {
-  background-color: $number-background-color;
-  border-radius: 100%;
-  color: $number-color;
-  display: inline-block;
-  font-size: .8em;
-  height: 30px;
-  line-height: 30px;
-  margin-right: 4px;
   text-align: center;
-  text-shadow: 0 1px 0 $text-shadow;
-  width: 30px;
+  font-weight: normal;
+  color: $gray-light;
 }
 
-@media screen and (min-width: 480px) {
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
 
-  form {
-    max-width: 480px;
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: $gray-light;
+    text-decoration: none;
   }
-
 }
 
-body {
-  height: 100vh;
-  margin: 0;
+#head {
+  color: white;
+  &:hover {
+    color: $gray-light;
+    text-decoration: none;
+  }
 }
 
-form {
-  margin-top: 0;
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
 }
 
-.welcome {
-  background: linear-gradient($welcome-black-trans, $welcome-black-notrans);
-  height: inherit;
-  padding: 20px;
+input {
+  height: auto !important;
 }
 
-.signin {
-  margin-top: 80px;
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }
 
 .checkbox {
@@ -164,7 +119,7 @@ form {
     font-weight: normal;
   }
   input[type="checkbox"] {
-    margin-left: 0px !important;
+    margin-left: -130px;
   }
 }
 
@@ -174,6 +129,11 @@ form {
     padding: 12px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
 
 aside {
@@ -197,13 +157,12 @@ aside {
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
-      margin-top: 50px;
     }
   }
 }
 
 .usersong {
-  margin-top: 80px;
+  margin-top: 40px;
   li {
     overflow: auto;
     padding: 12px 0;
