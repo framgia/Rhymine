@@ -1,7 +1,7 @@
 <div class="col-md-12">
   <div class="col-md-8">
     <h3><%= @song.title %></h3>
-    <p><%= @song.artist %></p>
+    <h4><%= @song.artist %></h4><br>
     <%= t "song.show.uploader" %> <%= @song.user.name %><br>
     <%= t "song.show.genre" %> <%= @song.genre.name %><br>
 
@@ -12,6 +12,29 @@
             controls: "controls", id: "audio-player" %>
         </div>
       </div>
+    </div>
+    <br>
+
+    <% if @song.comments %>
+      <h4><%= t "comment.name", count: @song.comments.count %></h4>
+    <% end %>
+
+    <div class="col-md-12 comment-form">
+      <%= form_for @comment, url: comments_path, html: {method: :post},
+        remote: true do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
+        <%= f.hidden_field :song_id, value: @song.id %>
+        <div class="col-md-10">
+          <%= f.text_area :content, class: "form-control" %>
+        </div>
+        <div class="col-md-2">
+          <%= f.submit t("comment.button"), class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div id="comments">
+      <%= render @song.comments %>
     </div>
   </div>
 </div>

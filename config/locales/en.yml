@@ -43,10 +43,14 @@ en:
   user:
     show:
       all_songs: "All Songs"
+  comment:
+    button: "Comment"
+    name: "COMMENTS (%{count})"
+    posted_ago: "Posted %{time} ago"
   flash:
     danger:
       user_not_admin: "You are not administrator"
       user_not_existed: "Users didn't existed"
-      song_not_existed: "Song didn't existed"
+      not_found: "Object cannot found"
     info:
       upload_song_success: "Upload song sucessfull!"
