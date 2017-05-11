@@ -1,0 +1,17 @@
+<div class="col-md-12">
+  <div class="col-md-8">
+    <h3><%= @song.title %></h3>
+    <p><%= @song.artist %></p>
+    <%= t "song.show.uploader" %> <%= @song.user.name %><br>
+    <%= t "song.show.genre" %> <%= @song.genre.name %><br>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="audio-player">
+          <%= audio_tag @song.audio, type: "audio/mp3",
+            controls: "controls", id: "audio-player" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

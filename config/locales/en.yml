@@ -37,6 +37,9 @@ en:
       upload: "Upload your new song"
       button: "Upload"
       select: "- Select Genres -"
+    show:
+      uploader: "Uploader:"
+      genre: "Genre:"
   user:
     show:
       all_songs: "All Songs"
@@ -44,5 +47,6 @@ en:
     danger:
       user_not_admin: "You are not administrator"
       user_not_existed: "Users didn't existed"
+      song_not_existed: "Song didn't existed"
     info:
       upload_song_success: "Upload song sucessfull!"
