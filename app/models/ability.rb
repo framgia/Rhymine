@@ -9,5 +9,6 @@ class Ability
     else
       can :manage, Song
     end
+    can :manage, Comment
   end
 end
