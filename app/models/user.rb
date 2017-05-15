@@ -57,6 +57,10 @@ class User < ApplicationRecord
     BCrypt::Password.new(digest).is_password? token
   end
 
+  def like song
+    likes.find_by song: song
+  end
+
   private
   def downcase_email
     self.email.downcase

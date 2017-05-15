@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :songs, only: [:new, :create, :show]
   resources :comments, except: [:index, :new, :show]
+  resources :likes, only: [:create, :destroy]
 
   namespace :admins do
     resources :genres, only: [:index, :create]

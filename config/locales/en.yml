@@ -42,6 +42,8 @@ en:
     show:
       uploader: "Uploader:"
       genre: "Genre:"
+    like: "Like"
+    unlike: "Unlike"
   user:
     show:
       all_songs: "All Songs"
@@ -57,6 +59,7 @@ en:
       not_found: "Object cannot found"
       cannot_delete: "Cannot delete"
       cannot_update: "Update failed"
+      wrong: "Something wrong"
     info:
       upload_song_success: "Upload song sucessfull!"
     success:
