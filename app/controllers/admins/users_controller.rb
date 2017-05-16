@@ -12,6 +12,6 @@ class Admins::UsersController < ApplicationController
     else
       flash[:danger] = t "flash.danger.delete_user"
     end
-    redirect_to users_path
+    redirect_to admins_users_path
   end
 end
