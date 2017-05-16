@@ -1,15 +1,10 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:show]
+  load_and_authorize_resource
 
-  def show
+  def index
+    @users = User.paginate page: params[:page], per_page: Settings.per_page
   end
 
-  private
-  def find_user
-    @user = User.find_by id: params[:id]
-    if @user.nil?
-      flash[:danger] = t "flash.danger.user_not_existed"
-      redirect_to root_path
-    end
+  def show
   end
 end
