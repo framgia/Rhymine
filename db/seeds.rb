@@ -14,3 +14,11 @@ User.create!(
     password: password,
     password_confirmation: password)
 end
+
+Genre.create! ([
+  {name: "Pop"},
+  {name: "Ballad"},
+  {name: "R&B"},
+  {name: "Rap"},
+  {name: "Country"},
+])
