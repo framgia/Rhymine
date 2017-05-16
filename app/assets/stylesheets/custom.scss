@@ -233,3 +233,19 @@ audio {
 .badge {
   font-size: 16px;
 }
+
+.search {
+  border-bottom: 1px solid #696969;
+}
+
+.song-index {
+  margin-top: 20px;
+}
+
+.songs {
+  li {
+    overflow: auto;
+    border-bottom: 1px solid $gray-lighter;
+    padding-bottom: 30px;
+  }
+}

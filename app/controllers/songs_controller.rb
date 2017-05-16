@@ -1,6 +1,10 @@
 class SongsController < ApplicationController
   load_and_authorize_resource
 
+  def index
+    @songs = Song.search_song params[:search_param]
+  end
+
   def new
     @song = Song.new
     @genres = Genre.all
@@ -18,6 +22,7 @@ class SongsController < ApplicationController
 
   def show
     @comment = Comment.new
+    @song.update_attributes views: (@song.views + 1)
   end
 
   private
