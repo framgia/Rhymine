@@ -23,4 +23,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit :account_update, keys: [:name, :email,
       :password, :password_confirmation]
   end
+
+  def verify_admin
+    unless current_user.is_admin?
+      flash[:danger] = t "flash.danger.user_not_admin"
+      redirect_to root_path
+    end
+  end
 end

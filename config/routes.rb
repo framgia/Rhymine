@@ -8,12 +8,13 @@ Rails.application.routes.draw do
   post "/signin", to: "sessions#create"
   delete "/signout", to: "sessions#destroy"
 
-  resources :users, only: [:show]
+  resources :users, only: [:index, :show]
   resources :songs, except: [:edit, :update, :destroy]
   resources :comments, except: [:index, :new, :show]
   resources :likes, only: [:create, :destroy]
 
   namespace :admins do
     resources :genres, only: [:index, :create]
+    resources :users, only: [:index, :destroy]
   end
 end

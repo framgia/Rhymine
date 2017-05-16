@@ -6,6 +6,7 @@ class Ability
     if user.is_admin?
       can :manage, Genre
       can [:read, :destroy], Song
+      can :destroy, User
     else
       can :manage, Song
     end
@@ -14,5 +15,6 @@ class Ability
     can :destroy, Like do |like|
       like.user == user
     end
+    can [:read], User
   end
 end

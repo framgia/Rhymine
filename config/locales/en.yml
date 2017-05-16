@@ -19,6 +19,7 @@ en:
       profile: "Profile"
       account: "Account"
       song: "Song"
+      user: "User"
   session:
     signin: "Sign In"
     new_user: "New User?"
@@ -51,6 +52,7 @@ en:
   user:
     show:
       all_songs: "All Songs"
+    all_user: "All Users"
   comment:
     button: "Comment"
     name: "COMMENTS (%{count})"
@@ -64,7 +66,9 @@ en:
       cannot_delete: "Cannot delete"
       cannot_update: "Update failed"
       wrong: "Something wrong"
+      delete_user: "Error! Cann't delete user"
     info:
       upload_song_success: "Upload song sucessfull!"
     success:
       delete_success: "Delete sucessfull!"
+      delete_user: "User deleted"
