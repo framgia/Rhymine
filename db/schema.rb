@@ -91,12 +91,12 @@ ActiveRecord::Schema.define(version: 20170509074933) do
     t.string   "title"
     t.string   "artist"
     t.string   "description"
-    t.integer  "views"
+    t.integer  "views",       default: 0
     t.float    "avg_rating"
     t.integer  "user_id"
     t.integer  "genre_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "audio"
     t.index ["genre_id"], name: "index_songs_on_genre_id"
     t.index ["user_id"], name: "index_songs_on_user_id"

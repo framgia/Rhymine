@@ -8,6 +8,9 @@
     <span class="like-book">
       <%= render "likes/like_form", song: @song %>
     </span>
+    <h3><span class="label label-info label-lg">
+      <i class="fa fa-headphones"> | <%= @song.views %></i>
+    </span></h3>
 
     <div class="panel panel-default">
       <div class="panel-body">

@@ -4,6 +4,7 @@ en:
   error_form: "The form contains"
   delete: "Delete"
   confirm: "You sure?"
+  search: "Search"
   page:
     home:
       slogan: "Your music, all the time"
@@ -17,6 +18,7 @@ en:
       upload: "Upload"
       profile: "Profile"
       account: "Account"
+      song: "Song"
   session:
     signin: "Sign In"
     new_user: "New User?"
@@ -44,6 +46,8 @@ en:
       genre: "Genre:"
     like: "Like"
     unlike: "Unlike"
+    all: "All songs"
+    search: "Search..."
   user:
     show:
       all_songs: "All Songs"

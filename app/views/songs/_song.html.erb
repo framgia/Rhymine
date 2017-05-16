@@ -1,0 +1,8 @@
+<li>
+  <h4><%= link_to song.title, song %></h4>
+  <h5><%= song.artist %></h5>
+  <%= t "song.show.uploader" %> <%= song.user.name %><br>
+  <%= t "song.show.genre" %> <%= song.genre.name %><br>
+  <i class="fa fa-heart"> <%= song.likes.count %></i> |
+  <i class="fa fa-headphones"> <%= song.views %></i>
+</li>
