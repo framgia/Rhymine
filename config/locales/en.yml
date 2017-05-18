@@ -5,6 +5,12 @@ en:
   delete: "Delete"
   confirm: "You sure?"
   search: "Search"
+  users: "Users"
+  following: "Following"
+  follower: "Followers"
+  unfollow: "Unfollow"
+  follow: "Follow"
+
   page:
     home:
       slogan: "Your music, all the time"
@@ -52,6 +58,9 @@ en:
   user:
     show:
       all_songs: "All Songs"
+    all_user: "All Users"
+    following: "%{following} following"
+    follower: "%{follower} follower"
     all_user: "All Users"
   comment:
     button: "Comment"
