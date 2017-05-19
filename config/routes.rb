@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :relationships, only: :index
   end
-  resources :songs, except: [:edit, :update, :destroy]
+  resources :songs
   resources :comments, except: [:index, :new, :show]
   resources :likes, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
