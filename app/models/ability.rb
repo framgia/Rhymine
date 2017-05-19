@@ -8,7 +8,10 @@ class Ability
       can [:read, :destroy], Song
       can :destroy, User
     else
-      can :manage, Song
+      can [:new, :create, :read], Song
+      can [:edit, :update, :destroy], Song do |song|
+        song.user == user
+      end
     end
     can :manage, Comment
     can :create, Like

@@ -1,47 +1,62 @@
 <div class="col-md-12">
   <div class="col-md-8">
-    <h3><%= @song.title %></h3>
-    <h4><%= @song.artist %></h4><br>
-    <%= t "song.show.uploader" %> <%= @song.user.name %><br>
-    <%= t "song.show.genre" %> <%= @song.genre.name %><br>
-    <br>
-    <span class="like-book">
-      <%= render "likes/like_form", song: @song %>
-    </span>
-    <h3><span class="label label-info label-lg">
-      <i class="fa fa-headphones"> | <%= @song.views %></i>
-    </span></h3>
-
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="audio-player">
-          <%= audio_tag @song.audio, type: "audio/mp3",
-            controls: "controls", id: "audio-player" %>
-        </div>
-      </div>
+    <div class="col-md-9">
+      <h3><%= @song.title %></h3>
     </div>
-    <br>
-
-    <% if @song.comments %>
-      <h4><%= t "comment.name", count: @song.comments.count %></h4>
-    <% end %>
-
-    <div class="col-md-12 comment-form">
-      <%= form_for @comment, url: comments_path, html: {method: :post},
-        remote: true do |f| %>
-        <%= render "shared/error_messages", object: f.object %>
-        <%= f.hidden_field :song_id, value: @song.id %>
-        <div class="col-md-10">
-          <%= f.text_area :content, class: "form-control" %>
-        </div>
-        <div class="col-md-2">
-          <%= f.submit t("comment.button"), class: "btn btn-primary" %>
-        </div>
+    <div class="col-md-3">
+      <% if can? :update, @song %>
+        <%= link_to t("edit"), edit_song_path(@song), class: "btn btn-success" %>
+      <% end %>
+      <% if can? :destroy, @song %>
+        <%= link_to t("delete"), song_path(@song), method: :delete,
+          data: {confirm: t("confirm")}, class: "btn btn-danger" %>
       <% end %>
     </div>
 
-    <div id="comments">
-      <%= render @song.comments %>
+    <div class="col-md-12">
+      <h4><%= @song.artist %></h4><br>
+      <%= t "song.show.uploader" %> <%= @song.user.name %><br>
+      <%= t "song.show.genre" %> <%= @song.genre.name %><br>
+      <br>
+
+      <span class="like-book">
+        <%= render "likes/like_form", song: @song %>
+      </span>
+      <h3><span class="label label-info label-lg">
+        <i class="fa fa-headphones"> | <%= @song.views %></i>
+      </span></h3>
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="audio-player">
+            <%= audio_tag @song.audio, type: "audio/mp3",
+              controls: "controls", id: "audio-player" %>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <% if @song.comments %>
+        <h4><%= t "comment.name", count: @song.comments.count %></h4>
+      <% end %>
+
+      <div class="col-md-12 comment-form">
+        <%= form_for @comment, url: comments_path, html: {method: :post},
+          remote: true do |f| %>
+          <%= render "shared/error_messages", object: f.object %>
+          <%= f.hidden_field :song_id, value: @song.id %>
+          <div class="col-md-10">
+            <%= f.text_area :content, class: "form-control" %>
+          </div>
+          <div class="col-md-2">
+            <%= f.submit t("comment.button"), class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div id="comments">
+        <%= render @song.comments %>
+      </div>
     </div>
   </div>
 </div>

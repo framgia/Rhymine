@@ -10,6 +10,7 @@ en:
   follower: "Followers"
   unfollow: "Unfollow"
   follow: "Follow"
+  edit: "Edit"
 
   page:
     home:
@@ -55,6 +56,8 @@ en:
     unlike: "Unlike"
     all: "All songs"
     search: "Search..."
+    edit: "Edit Song"
+    edit_button: "Update"
   user:
     show:
       all_songs: "All Songs"
@@ -76,8 +79,12 @@ en:
       cannot_update: "Update failed"
       wrong: "Something wrong"
       delete_user: "Error! Cann't delete user"
+      not_updated: "Update failed"
+      not_deleted: "Deleted failed"
     info:
       upload_song_success: "Upload song sucessfull!"
     success:
       delete_success: "Delete sucessfull!"
       delete_user: "User deleted"
+      updated: "Update successfull"
+      deleted: "Delete successfull"
