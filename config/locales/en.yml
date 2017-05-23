@@ -11,6 +11,8 @@ en:
   unfollow: "Unfollow"
   follow: "Follow"
   edit: "Edit"
+  report: "Report"
+  close: "Close"
 
   page:
     home:
@@ -70,6 +72,9 @@ en:
     name: "COMMENTS (%{count})"
     posted_ago: "Posted %{time} ago"
     update: "Update"
+  report_new:
+    button: "Send request"
+
   flash:
     danger:
       user_not_admin: "You are not administrator"
@@ -88,3 +93,4 @@ en:
       delete_user: "User deleted"
       updated: "Update successfull"
       deleted: "Delete successfull"
+      report: "Send report successfull"

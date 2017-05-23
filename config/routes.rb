@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :comments, except: [:index, :new, :show]
   resources :likes, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :reports, only: [:new, :create]
 
   namespace :admins do
     resources :genres, only: [:index, :create]

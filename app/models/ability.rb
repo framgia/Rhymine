@@ -19,5 +19,6 @@ class Ability
       like.user == user
     end
     can [:read], User
+    can [:create], Report
   end
 end

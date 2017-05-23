@@ -11,6 +11,36 @@
         <%= link_to t("delete"), song_path(@song), method: :delete,
           data: {confirm: t("confirm")}, class: "btn btn-danger" %>
       <% end %>
+      <% if !current_user.current_user? @song.user %>
+        <%= link_to t("report"), "#", {remote: true, 'data-toggle':  "modal", 'data-target': '#modal-report', class: "btn btn-warning"} %>
+        </i>
+      <% end %>
+    </div>
+
+    <div class="modal fade" id="modal-report" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><%= t "report" %></h4>
+          </div>
+          <div class="modal-body">
+            <%= form_for @report, html: {method: :post} do |f| %>
+              <%= f.hidden_field :song_id, value: @song.id %>
+              <%= f.hidden_field :user_id, value: current_user.id %>
+
+              <%= f.label :description %>
+              <%= f.text_area :description, class: "form-control" %>
+              <%= f.submit t("report_new.button"), class: "btn btn-primary" %>
+            <% end %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <%= t "close" %>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="col-md-12">
