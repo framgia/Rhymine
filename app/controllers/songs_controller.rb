@@ -23,7 +23,8 @@ class SongsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @song.update_attributes views: (@song.views + 1)
+    @report = Report.new
+    views_song
   end
 
   def edit
@@ -57,5 +58,9 @@ class SongsController < ApplicationController
 
   def load_genres
     @genres = Genre.all
+  end
+
+  def views_song
+    @song.update_attributes views: (@song.views + 1)
   end
 end
