@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   namespace :admins do
     resources :genres, only: [:index, :create]
     resources :users, only: [:index, :destroy]
+    resources :reports, only: :index
   end
 end

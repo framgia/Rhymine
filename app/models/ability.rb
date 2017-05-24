@@ -7,6 +7,7 @@ class Ability
       can :manage, Genre
       can [:read, :destroy], Song
       can :destroy, User
+      can :read, Report
     else
       can [:new, :create, :read], Song
       can [:edit, :update, :destroy], Song do |song|

@@ -7,6 +7,7 @@
           <% if current_user.is_admin? %>
             <li><%= link_to t("genres.name"), admins_genres_path %></li>
             <li><%= link_to t("page.home.user"), admins_users_path %></li>
+            <li><%= link_to t("page.home.report"), admins_reports_path %></li>
           <% else %>
             <li><%= link_to t("page.home.upload"), new_song_path %></li>
             <li><%= link_to t("page.home.user"), users_path %></li>
