@@ -48,7 +48,8 @@
 
     <div class="col-md-12">
       <h4><%= @song.artist %></h4><br>
-      <%= t "song.show.uploader" %> <%= @song.user.name %><br>
+      <%= t "song.show.uploader" %>
+      <%= link_to @song.user.name, @song.user %><br>
       <%= t "song.show.genre" %> <%= @song.genre.name %><br>
       <br>
 
@@ -60,7 +61,7 @@
       </span></h3>
 
       <div class="panel panel-default">
-        <div class="panel-body">
+        <div class="audio-bg">
           <div class="audio-player">
             <%= audio_tag @song.audio, type: "audio/mp3",
               controls: "controls", id: "audio-player" %>
@@ -89,6 +90,24 @@
 
       <div id="comments">
         <%= render @song.comments %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <br>
+    <div class="panel panel-primary">
+      <div class="panel-heading"><%= t "song.recommend" %></div>
+      <div class="panel-body">
+        <ol class="songs">
+          <% @song.user.songs.shuffle[0..4].each do |song| %>
+            <li>
+              <%= link_to song.title, song %>
+              <br>
+              <%= song.user.name %>
+            </li>
+          <% end %>
+        </ol>
       </div>
     </div>
   </div>

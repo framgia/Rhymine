@@ -11,10 +11,35 @@
     </section>
     <%= render "follow_form" %>
   </aside>
-  <div class="col-md-8 usersong">
-    <p class="title"><%= t ".all_songs" %></p>
-    <% @user.songs.each do |song| %>
-      <li><%= link_to song.title, song %></li>
-    <% end %>
+
+  <div class="col-md-8">
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#user-songs">
+        <%= t "user.show.all_songs" %>
+      </a></li>
+      <li><a data-toggle="tab" href="#user-favourite">
+        <%= t "user.show.favourite" %>
+      </a></li>
+    </ul>
+  </div>
+
+  <div class="tab-content">
+    <div id="user-songs" class="tab-pane fade in active">
+      <ol class="songs">
+        <% @user.songs.each do |song| %>
+          <li><%= link_to song.title, song %></li>
+        <% end %>
+      </ol>
+    </div>
+    <div id="user-favourite" class="tab-pane fade">
+      <ol class="songs">
+        <% @user.likes.each do |like| %>
+          <li>
+            <%= link_to like.song.title, like.song %><br>
+            <%= link_to like.user.name, like.user, class: "link" %>
+          </li>
+        <% end %>
+      </ol>
+    </div>
   </div>
 </div>

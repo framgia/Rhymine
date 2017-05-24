@@ -61,9 +61,11 @@ en:
     search: "Search..."
     edit: "Edit Song"
     edit_button: "Update"
+    recommend: "Recommend song"
   user:
     show:
       all_songs: "All Songs"
+      favourite: "Favourite Songs"
     all_user: "All Users"
     following: "%{following} following"
     follower: "%{follower} follower"

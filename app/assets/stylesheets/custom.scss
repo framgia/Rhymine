@@ -198,9 +198,10 @@ aside {
   padding-top: 130px;
 }
 
-.panel-body {
+.audio-bg {
   padding-top: 10px;
   background-image: url(https://timemanagement.nl/wp-content/uploads/muziek-concentratie-werken-642x250.jpg);
+  padding-left: 20px;
 }
 
 .panel.panel-default {
@@ -291,4 +292,8 @@ audio {
 
 .report-description {
   width: 350px;
+}
+
+.link {
+  color: black
 }
