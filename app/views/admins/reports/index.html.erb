@@ -1,0 +1,30 @@
+<div class="container">
+  <h1><%= t "report" %></h1>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr class="info">
+        <th class="center"><%= t "reports.reporter" %></th>
+        <th class="center"><%= t "reports.song" %></th>
+        <th class="center report-description"><%= t "reports.description" %></th>
+        <th class="center"><%= t "reports.time" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @reports.each do |report| %>
+        <tr>
+          <td><%= report.user.name %></td>
+          <td>
+            <% if report.song %>
+              <%= link_to report.song.title, report.song %>
+            <% else %>
+              <%= t "report.delete" %>
+            <% end %>
+          </td>
+          <td><%= report.description %></td>
+          <td><%= report.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
