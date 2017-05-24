@@ -133,6 +133,7 @@ input {
   li {
     overflow: auto;
     border-bottom: 1px solid $gray-lighter;
+    padding: 20px;
   }
 }
 
@@ -236,6 +237,7 @@ audio {
 
 .search {
   border-bottom: 1px solid #696969;
+  padding-bottom: 20px;
 }
 
 .song-index {
@@ -246,7 +248,7 @@ audio {
   li {
     overflow: auto;
     border-bottom: 1px solid $gray-lighter;
-    padding-bottom: 30px;
+    padding: 20px;
   }
 }
 

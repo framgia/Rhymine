@@ -3,7 +3,9 @@ class SongsController < ApplicationController
   before_action :load_genres, only: [:new, :edit]
 
   def index
-    @songs = Song.search_song params[:search_param]
+    search_song = Song.search_song params[:search_param]
+    @songs = search_song.paginate page: params[:page],
+      per_page: Settings.per_page
   end
 
   def new
