@@ -1,0 +1,9 @@
+<%= form_for [:admins, @genre], html: {method: :put}, remote: true do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="col-md-9">
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="col-md-3">
+    <%= f.submit t("genres.update"), class: "btn btn-primary" %>
+  </div>
+<% end %>

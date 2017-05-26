@@ -47,6 +47,7 @@ en:
   genres:
     name: "Genres"
     create: "Create genre"
+    update: "Update"
   song:
     new:
       upload: "Upload your new song"
