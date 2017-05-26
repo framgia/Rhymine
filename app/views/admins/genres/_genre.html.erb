@@ -2,4 +2,15 @@
   <div class="col-md-8">
     <%= genre.name %>
   </div>
+  <div class="col-md-4">
+    <%= link_to edit_admins_genre_path(genre), remote: true do %>
+      <i class="fa fa-pencil-square-o"></i>
+      <%= t "edit" %>
+    <% end %> |
+    <%= link_to admins_genre_path(genre), method: :delete, remote: true,
+      data: {confirm: t("confirm")} do %>
+      <i class="fa fa-trash-o"></i>
+      <%= t "delete" %>
+    <% end %>
+  </div>
 </li>
