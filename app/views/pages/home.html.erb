@@ -1,3 +1,24 @@
 <div class="center jumbotron">
   <h1><%= t "page.home.slogan" %></h1>
 </div>
+<div class="col-md-6 col-md-offset-3">
+  <ol class="songs">
+    <% @song_feeds.each do |song| %>
+      <li>
+        <div class="col-md-2">
+          <%= gravatar_for song.user %>
+        </div>
+        <div class="col-md-10">
+          <%= song.user.name %> <%= t "uploaded" %> <br>
+          <%= link_to song.title, song %><br>
+          <i class="fa fa-heart"> <%= song.likes.count %></i> |
+          <i class="fa fa-headphones"> <%= song.views %></i> <br>
+          <br>
+          <span class="timestamp">
+            <%= t "comment.posted_ago", time: time_ago_in_words(song.created_at) %>
+          </span>
+        </div>
+      </li>
+    <% end %>
+  </ol>
+</div>
